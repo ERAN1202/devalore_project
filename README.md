@@ -30,7 +30,7 @@ for i in sorted_values:
     for k in currency_name.keys():
         if currency_name[k] < 10:
             sorted_dict[k] = currency_name[k]
-            
+#I took one key and check if its upper then 10 and one key lower then 10.            
     def test_prod():
         assert currency_name['AZN'] < 10
 
@@ -39,5 +39,11 @@ for i in sorted_values:
 
 print(sorted_dict)
 
-#I took one key and check if its upper then 10 and one key lower then 10.
+#install docker and download jenkins image:
+
+docker pull jenkins/jenkins
+docker image inspect [image.ID] #in this info. we look for the exposed port to the jenkis service which is port 8080
+docker run -d -p 80:8080 jenkins/jenkins #in this command the jenkins will run while it expose port 80.
+
+
 
